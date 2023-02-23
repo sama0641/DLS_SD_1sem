@@ -20,7 +20,7 @@ router.post("/api/customers", async (req, res) => {
     const query = "INSERT INTO customers (uuid, firstname, lastname, email, password) VALUES (?, ?, ?, ?, ?)";
     try{
         const [rows, fields] = await db.promise().query(query, [uuid, firstname, lastname, email, password]);
-        res.send("👍");
+        res.status(200);
     }catch(error){
         console.log(error);
         res.status(500);
