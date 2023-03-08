@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  admin-backend:
+    build: ./admin-backend
+    ports:
+      - 3000:3000
+  database-manager:
+    build: ./database-manager
+    ports: 
+      - 5050:5050

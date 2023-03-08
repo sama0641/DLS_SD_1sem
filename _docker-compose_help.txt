@@ -1,0 +1,25 @@
+Hjælp til brug af docker-compose
+
+Det første i kan gøre er at slette alle images, hvis i har siddet og rodet med docker selv
+- Selvfølgelig kun brug denne kommando, hvis i ikke har andre docker images kørende i skal bruge til fx arbejde
+
+-> docker image rm $(docker image ls -q) //fjerne alle images
+
+Når der så ikke er "overskuds" images tilbage, der kan skabe rod, build images med docker-compose
+HUSK!! - Du skal kun builde EN gang. 
+
+-> docker-compose build
+Dette kan enten gøres som vist, eller ved at kigge bort fra eventuelle cached images ved at køre
+
+-> docker-compose build --no-cache
+
+Så vil den køre 2 images op, henholdsvis database-manage og admin-backend hvor du derefter skal sætte dem op med containere og køre dem. Dette bliver gjort af sig selv, ved at køre
+
+-> docker-compose up
+For at stoppe dem igen brug
+-> docker-compose down
+
+næste gang du så skal tænde dem igen, kører du bare 
+
+-> docker-compose up
+
