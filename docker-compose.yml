@@ -1,0 +1,25 @@
+version: "3.9"
+services:
+  admin-backend:
+    image: admin-backend
+    build: ./admin-backend
+    ports:
+      - 3000:3000
+  customer-backend:
+    image: customer-backend
+    build: ./customer-backend
+    ports: 
+      - 5050:5050
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    networks:
+      - projectNetwork
+    ports:
+      - 5672:5672
+      - 15672:15672
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+networks:
+  projectNetwork:
