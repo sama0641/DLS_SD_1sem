@@ -1,0 +1,26 @@
+{
+  "type": "module",
+  "scripts": {
+    "start-dev": "nodemon app.js",
+    "runDocker": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.7.1",
+    "@azure/service-bus": "^7.9.0",
+    "amqplib": "^0.10.3",
+    "apollo": "^2.34.0",
+    "bcrypt": "^5.1.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "fs": "^0.0.1-security",
+    "jsonwebtoken": "^9.0.0",
+    "morgan": "^1.10.0",
+    "mysql2": "^3.2.0",
+    "promise-mysql": "^5.2.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^4.6.2",
+    "winston": "^3.8.2"
+  }
+}
