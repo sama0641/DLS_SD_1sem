@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/d9aa7968-4d21-48f4-9b8e-e7a1784e8f0b/resourceGroups/dlsAdminBackend/providers/Microsoft.Web/sites/dls-admin-backend",
+    "appService.deploySubpath": "."
+}

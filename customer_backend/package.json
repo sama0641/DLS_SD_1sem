@@ -1,0 +1,38 @@
+{
+  "name": "azuretesting",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js",
+    "start-dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Omoezone/azureTesting.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Omoezone/azureTesting/issues"
+  },
+  "homepage": "https://github.com/Omoezone/azureTesting#readme",
+  "dependencies": {
+    "@azure/service-bus": "^7.9.3",
+    "amqplib": "^0.10.3",
+    "axios": "^1.4.0",
+    "bcrypt": "^5.1.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "morgan": "^1.10.0",
+    "mysql2": "^3.3.0",
+    "svelte": "^3.59.1",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^4.6.3",
+    "winston": "^3.8.2"
+  }
+}

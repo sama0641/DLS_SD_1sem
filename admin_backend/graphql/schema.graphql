@@ -1,0 +1,92 @@
+# --- Queries ---
+type Query {   
+    # Admins
+    GetAdmins: [AdminCombined]
+    GetAdminById(admin_id: Int!): AdminCombinedById
+    GetDeletedAdmins: [AdminCombined]
+    CreateAdmin(username: String!, email: String!, pass: String!): AdminCombined
+    UpdateAdmin(admin_id: Int!, username: String!, email: String!, pass: String!): AdminCombined
+    DeleteAdmin(admin_id: Int!): AdminCombined
+    # Customers
+    GetCustomers: [CustomerCombined]
+    GetCustomerById(customer_id: Int!): CustomerCombined
+    GetDeletedCustomers: [CustomerCombined]
+    # Look into properly not setting all as required
+
+}
+type Mutation{
+    Login(username: String!, pass: String!): AdminLogin
+    CreateCustomer(firstname: String!, lastname: String!, age: Int!, email: String!, password: String!): customerCreationResult
+    UpdateCustomer(customer_id: Int!, firstname: String!, lastname: String!, age: Int!, email: String!, password: String!): CustomerCreationCombined
+    DeleteCustomer(customer_id: Int!): CustomerCombined
+}
+
+# --- Mutations ---
+type AdminCombined {
+    id: ID
+    created_at: String
+    deleted: Boolean
+    deleted_at: String
+    admin_id: Int
+    username: String
+    email: String
+    pass: String
+    is_admin: Boolean
+    is_superuser: Boolean
+    snap_timestamp: String
+}
+type AdminCombinedById {
+    id: ID
+    created_at: String
+    deleted: Boolean
+    deleted_at: String
+    admin_id: Int!
+    username: String
+    email: String
+    pass: String
+    is_admin: Boolean
+    is_superuser: Boolean
+    snap_timestamp: String
+}
+
+type CustomerCombined {
+    id: ID
+    created_at: String
+    deleted: Boolean
+    deleted_at: String
+    customer_id: Int
+    first_name: String
+    last_name: String
+    age: Int
+    email: String
+    password: String
+    snap_timestamp: String
+}
+type CustomerCreationCombined {
+    id: ID
+    created_at: String
+    deleted: Boolean
+    deleted_at: String
+    customer_id: Int
+    firstname: String
+    lastname: String
+    age: Int
+    email: String
+    password: String
+    snap_timestamp: String
+}
+
+type AdminLogin {
+    admin_id: Int
+    username: String
+    email: String
+    is_superuser: Boolean
+    jwttoken: String
+}
+type customerCreationResult {
+    firstname: String
+    lastname: String
+    age: Int
+    email: String
+    password: String
+}
