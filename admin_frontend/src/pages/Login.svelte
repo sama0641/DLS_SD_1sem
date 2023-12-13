@@ -27,7 +27,7 @@
             "Content-Type": "application/json;charset=UTF-8",
         }
         
-        const response = await fetch('https://dls-admin-backend.azurewebsites.net/graphql', {
+        const response = await fetch('http://localhost:3000/auth/login', {
             method: 'POST',
             headers: header,
             body: JSON.stringify({

@@ -44,6 +44,7 @@ export async function loginAdmin(values){
             console.log(bcryptValue)
             if(bcryptValue === true) {
                 let token = await generateAccessToken(rows[0].username);
+                console.log(token)
                 const payload = {
                     "jwttoken": token,
                     "admin_id": rows[0].admin_id,

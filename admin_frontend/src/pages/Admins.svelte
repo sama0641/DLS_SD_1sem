@@ -3,7 +3,7 @@
 
     async function getAdmins() {
         let admins = await axios
-        .get('https://dls-admin-backend.azurewebsites.net/admins', {
+        .get('http://localhost:3000/admins', {
             headers: {
                 Authorization: "Bearer " + localStorage.getItem("jwttoken"),
                 'Access-Control-Allow-Origin': '*',
