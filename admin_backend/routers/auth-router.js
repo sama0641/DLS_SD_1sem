@@ -75,7 +75,7 @@ export async function authenticateToken(req, res, next) {
     const token = authHeader && authHeader.split(' ')[1]; // Bearer TOKEN
     if (token == null) return res.sendStatus(401);
 
-    jwt.verify(token, process.env.JWT_TOKEN, (err, user) => {
+    jwt.verify(token, process.env.JWT_TOKEN, (err, user) => { //secret bliver decodet > bliver til et object
         if (err) return res.sendStatus(403);
 
         req.user = user;
