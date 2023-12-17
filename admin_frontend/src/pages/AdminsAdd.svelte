@@ -17,7 +17,7 @@
 
         await axios({
             method: 'post',
-            url: 'http://localhost:3000/admin',
+            url: 'https://adminbackendserver.azurewebsites.net/admin',
             headers: {
                 jswtoken: localStorage.getItem("jwttoken"),
                 'Access-Control-Allow-Origin': '*',

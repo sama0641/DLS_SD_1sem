@@ -174,7 +174,7 @@ const options = {
         },
         servers: [
             {
-                url: process.env.SWAGGER_URL || "http://localhost:3000",
+                url: process.env.SWAGGER_URL || "https://adminbackendserver.azurewebsites.net/",
             },
         ],
     },

@@ -17,7 +17,7 @@
 
         await axios({
             method: 'post',
-            url: 'http://localhost:3000/add_account',
+            url: 'https://customerbackendserver.azurewebsites.net/add_account',
             headers: {
                 jswtoken: localStorage.getItem("jwttoken"),
                 'Access-Control-Allow-Origin': '*',

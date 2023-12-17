@@ -134,7 +134,7 @@ export async function createCustomer(values) {
     }
     connection.release();
     // send email to customer 
-    await azureMailFunction(values.email, values.firstname);
+    // await azureMailFunction(values.email, values.firstname);
     return "customer added";
 }
 
@@ -197,16 +197,16 @@ export async function deleteCustomer(id) {
 }
 
 // Nodemail service
-async function azureMailFunction(email, firstname) {
-    try {
-        const url = process.env.FUNCTION_AZURE_URL;
-        const requestBody = { subscriber_email: email, subscriber_name: firstname };
+// async function azureMailFunction(email, firstname) {
+//     try {
+//         const url = process.env.FUNCTION_AZURE_URL;
+//         const requestBody = { subscriber_email: email, subscriber_name: firstname };
 
-        const response = await axios.post(url, requestBody);
-        logger.verbose('Response:', response.data);
-    } catch (error) {
-        logger.error('Error with azureMailFunction:', error.response.data);
-    }
-};
+//         const response = await axios.post(url, requestBody);
+//         logger.verbose('Response:', response.data);
+//     } catch (error) {
+//         logger.error('Error with azureMailFunction:', error.response.data);
+//     }
+// };
 
 export default router;

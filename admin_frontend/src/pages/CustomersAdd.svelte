@@ -35,7 +35,7 @@
             password: password
         }
 
-        const response = await fetch('http://localhost:3000/graphql', {
+        const response = await fetch('https://adminbackendserver.azurewebsites.net/graphql', {
             method: 'POST',
             headers: header,    
             body: JSON.stringify({

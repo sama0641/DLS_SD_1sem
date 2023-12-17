@@ -27,7 +27,7 @@
             "Content-Type": "application/json;charset=UTF-8",
         }
         
-        const response = await fetch('http://localhost:3000/auth/login', {
+        const response = await fetch('https://adminbackendserver.azurewebsites.net/auth/login', {
             method: 'POST',
             headers: header,
             body: JSON.stringify({
